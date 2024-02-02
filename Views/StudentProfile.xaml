@@ -1,0 +1,36 @@
+﻿<t:RadWindow x:Class="AcademyEFCore_NET7.Views.StudentProfile"
+        xmlns:t="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AcademyEFCore_NET7.Views"
+        xmlns:navigation="clr-namespace:Telerik.Windows.Controls.Navigation;assembly=Telerik.Windows.Controls.Navigation"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        navigation:RadWindowInteropHelper.ShowInTaskbar="True" HideMaximizeButton="True" ResizeMode="CanMinimize"
+        Header="Student Profiles" Height="550" Width="1250">
+    <Grid>
+        <t:RadWatermarkTextBox HorizontalAlignment="Left" Name="TextBoxFirstName"   Margin="15,67,0,0"  TextWrapping="Wrap"   VerticalAlignment="Top" WatermarkContent="Enter First Name"    Width="190" Height="40"/>
+        <t:RadWatermarkTextBox HorizontalAlignment="Left" Name="TextBoxLastName"    Margin="15,109,0,0"  TextWrapping="Wrap"   VerticalAlignment="Top" WatermarkContent="Enter Last Name"     Width="190" Height="40"/>
+        <t:RadWatermarkTextBox HorizontalAlignment="Left" Name="TextBoxEmail"       Margin="15,153,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" WatermarkContent="Enter Email"         Width="190" Height="40"/>
+        <t:RadWatermarkTextBox HorizontalAlignment="Left" Name="TextBoxPhone"       Margin="15,197,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" WatermarkContent="Enter Phone Number"  Width="190" Height="40"/>
+        <t:RadWatermarkTextBox HorizontalAlignment="Left" Name="TextBoxAge"         Margin="15,240,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" WatermarkContent="Enter Age"  Width="190" Height="40"/>
+        <t:RadWatermarkTextBox HorizontalAlignment="Left" Name="TextBoxStudentCode" Margin="15,282,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" WatermarkContent="Enter Student Code"  Width="190" Height="40"/>
+        <t:RadWatermarkTextBox HorizontalAlignment="Left" Name="TextBoxSID"   Margin="15,22,0,0"  TextWrapping="Wrap"   VerticalAlignment="Top" WatermarkContent="Student ID" IsEnabled="False"   Width="190" Height="40"/>
+        <t:RadButton Content="Register" Name="RegisterStudentButton" HorizontalAlignment="Left" Height="44" Margin="15,345,0,0" VerticalAlignment="Top" Width="190" Click="RegisterStudentButton_Click"/>
+        <t:RadGridView HorizontalAlignment="Left" Name="GridViewStudent" Margin="231,23,0,0" VerticalAlignment="Top" Height="471" Width="985" RenderTransformOrigin="0.5,0.5" ShowColumnFooters="True" SelectionChanged="GridViewStudent_SelectionChanged" ShowSearchPanel="True">
+            <t:RadGridView.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.108"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.767"/>
+                </TransformGroup>
+            </t:RadGridView.RenderTransform>
+        </t:RadGridView>
+        <t:RadButton Content="Update" Name="UpdateStudent" HorizontalAlignment="Left" Height="44" Margin="15,394,0,0" VerticalAlignment="Top" Width="190" Click="UpdateStudent_Click"/>
+        <t:RadButton Content="Delete" Name="DeleteStudent" HorizontalAlignment="Left" Height="44" Margin="15,443,0,0" VerticalAlignment="Top" Width="190" Click="DeleteStudent_Click"/>
+
+    </Grid>
+</t:RadWindow>

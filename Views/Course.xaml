@@ -1,0 +1,23 @@
+﻿<t:RadWindow x:Class="AcademyEFCore_NET7.Views.Course"
+        xmlns:t="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:navigation="clr-namespace:Telerik.Windows.Controls.Navigation;assembly=Telerik.Windows.Controls.Navigation"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AcademyEFCore_NET7.Views"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        navigation:RadWindowInteropHelper.ShowInTaskbar="True" HideMaximizeButton="True" ResizeMode="CanMinimize"
+        Header="Course" Height="450" Width="800">
+    <Grid>
+        <t:RadWatermarkTextBox Name="TextBoxCID" HorizontalAlignment="Left" Margin="18,25,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" WatermarkContent="Cource CID" Width="190" Height="43" IsEnabled="False"/>
+        <t:RadWatermarkTextBox Name="TextBoxCourseName" HorizontalAlignment="Left" Margin="18,73,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" WatermarkContent="Enter Course Name" Width="190" Height="43"/>
+        <t:RadWatermarkTextBox Name="TextBoxCourseCategory" HorizontalAlignment="Left" Margin="18,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" WatermarkContent="Enter Category Name" Width="190" Height="43"/>
+        <t:RadButton  Name="RegisterCourseButton" Content="Register" HorizontalAlignment="Left" Height="43" Margin="18,200,0,0" VerticalAlignment="Top" Width="190" Click="RegisterCourseButton_Click"/>
+        <t:RadButton  Name="UpdateCourseButton"   Content="Update" HorizontalAlignment="Left" Height="43" Margin="18,247,0,0" VerticalAlignment="Top" Width="190" Click="UpdateCourseButton_Click"/>
+        <t:RadButton  Name="DeleteCourseButton"   Content="Delete" HorizontalAlignment="Left" Height="43" Margin="18,295,0,0" VerticalAlignment="Top" Width="190" Click="DeleteCourseButton_Click"/>
+        <t:RadGridView Name="GridViewCourse" HorizontalAlignment="Left" Margin="218,25,0,0" VerticalAlignment="Top" Height="373" Width="552" SelectionChanged="GridViewCourse_SelectionChanged"/>
+
+    </Grid>
+</t:RadWindow>
