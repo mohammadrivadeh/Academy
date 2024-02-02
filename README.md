@@ -1,2 +1,4 @@
 # Academy
- C# Telrik UI EF
+ C#
+ Telerik UI
+ EF
